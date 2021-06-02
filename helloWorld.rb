@@ -31,11 +31,22 @@
 
  print 'Enter the second number  '
  second_number = gets.chomp
+ 
+ print "Type in and enter the operation that you would like to do (Add, Subtract, Multiply, or Divide): "
+ 
+ selected_operation = gets.chomp
 
- # .to_i converts the input from string to an integer
- result_product = first_number.to_i * second_number.to_i 
- puts "The sum of the two numbers is #{add(first_number,second_number)}"
- puts "The difference of #{first_number} - #{second_number} is #{subtract(first_number,second_number)}"
- puts "The product of the two numbers is #{multiply(first_number,second_number)}"
- puts "The quotient of #{first_number } / #{second_number}  is #{divide(first_number,second_number)}"
+ if     selected_operation.eql?("Add")
+        puts "The sum of the two numbers is #{add(first_number,second_number)}"
+ elsif selected_operation.eql?("Subtract")
+        puts "The difference of #{first_number} - #{second_number} is #{subtract(first_number,second_number)}"
+ elsif selected_operation.eql?("Multiply")
+        puts "The product of the two numbers is #{multiply(first_number,second_number)}"
+ elsif selected_operation.eql?("Divide")
+        puts "The quotient of #{first_number } / #{second_number}  is #{divide(first_number,second_number)}"
+ else
+         puts "The operation you typed in and entered is not recognized."
+ end
+ 
+ 
 
