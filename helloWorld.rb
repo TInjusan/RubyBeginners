@@ -35,17 +35,18 @@
  print "Type in and enter the operation that you would like to do (Add, Subtract, Multiply, or Divide): "
  
  selected_operation = gets.chomp
-
- if     selected_operation.eql?("Add")
+ 
+ case selected_operation
+ when  "Add"
         puts "The sum of the two numbers is #{add(first_number,second_number)}"
- elsif selected_operation.eql?("Subtract")
+ when  "Subtract"
         puts "The difference of #{first_number} - #{second_number} is #{subtract(first_number,second_number)}"
- elsif selected_operation.eql?("Multiply")
+ when   "Multiply"
         puts "The product of the two numbers is #{multiply(first_number,second_number)}"
- elsif selected_operation.eql?("Divide")
+ when   "Divide"
         puts "The quotient of #{first_number } / #{second_number}  is #{divide(first_number,second_number)}"
  else
-         puts "The operation you typed in and entered is not recognized."
+        puts "The operation you typed in and entered is not recognized."
  end
  
  
