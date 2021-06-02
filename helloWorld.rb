@@ -1,5 +1,12 @@
-puts 'What is your name?'
-first_name = gets.chomp
-greetings = "Hi "
+ 
+ #Working with strings
+ 
+ puts 'What is your name?'
+ 
+ #getting the name using gets.chomp
+ first_name = gets.chomp
+ greetings = "Hi "
 
-puts greetings+first_name+"!"
+ #String concatenation with variables
+ puts greetings+" "+first_name+"!"
+ 
