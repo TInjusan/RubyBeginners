@@ -1,53 +1,48 @@
  
- #Methods implementation
- 
- #Methods should be declared or written first before the main program, otherwise it will produce an error saying that the methods you are using are undefined
+ #Array implementation 
 
- #The last statement of the method will be the return value
- def add(first_number,second_number)
-    first_number.to_i + second_number.to_i
- end
+ arr = [1, 2, 3, 4, 5, 6, 7, 8 ,9, 10]
+ 
+ print arr     #prints all the elemets of the array
+ puts          #blank puts sets up a new line
+ puts arr.last #gets the last elemet of the array
 
- def subtract(first_number,second_number)
-    first_number.to_i - second_number.to_i
- end
-
- def multiply(first_number,second_number)
-    first_number.to_i * second_number.to_i
- end
+ #creating an array from 1 to 100 using the .to_a function. This converts the series to an array type
+ arr_of_numbers = (1..100).to_a
+ print arr_of_numbers
+ puts
+ #Shuffles the array elements randomly for printing purposes only
+ print arr_of_numbers.shuffle
+ puts "______________________________________"
+ print arr_of_numbers
  
- def divide(first_number,second_number)
-    # .to_f converts the input number to a float data type
-     (first_number.to_f / second_number.to_f).round(2)
-    # .round(decimal_places) to round a floating number 
- end
-
- #puts function automatically add new line in the end
- puts 'Basic Arithmetic'
-
- #print function does NOT automatically add new line in the end (continues strings)
- print 'Enter the first number  '
- first_number = gets.chomp
-
- print 'Enter the second number  '
- second_number = gets.chomp
+ #Shuffles the array elements permanently so it replaces the arrangement of the actual array
+ print arr_of_numbers.shuffle!
+ puts "\n\n"
  
- print "Type in and enter the operation that you would like to do (Add, Subtract, Multiply, or Divide): "
+ #Sorts the array
+ print "Sorted array:"  
+ print arr_of_numbers.sort!
+ puts "\n\n"
  
- selected_operation = gets.chomp
+ #Reverse the array
+ print "Reversed array:" 
+ print arr_of_numbers.reverse!
+ puts "\n\n"
  
- case selected_operation
- when  "Add"
-        puts "The sum of the two numbers is #{add(first_number,second_number)}"
- when  "Subtract"
-        puts "The difference of #{first_number} - #{second_number} is #{subtract(first_number,second_number)}"
- when   "Multiply"
-        puts "The product of the two numbers is #{multiply(first_number,second_number)}"
- when   "Divide"
-        puts "The quotient of #{first_number } / #{second_number}  is #{divide(first_number,second_number)}"
- else
-        puts "The operation you typed in and entered is not recognized."
- end
+ #adding exclamation point makes it permanent without it, it's just for printing
  
- 
+ # =begin and =end creates a multi-line coment, make sure that the =begin is at the very beginning of the line, no space.
+  
+=begin
+ Here are some of the most used ones
+ array.length or array.size returns the number of elements in array.
+ array.sort returns a new array with the elements sorted
+ array.uniq returns a new array with duplicate values removed from array.
+ array.uniq! removes duplicates in place.
+ array.freeze safeguards the array, preventing it from being modified.
+ array.include?(obj) returns true if obj is present in array, false otherwise.
+ array.min returns the element with the minimum value.
+ array.max returns the element with the maximum value. 
+ =end
 
