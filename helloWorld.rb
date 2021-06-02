@@ -1,12 +1,20 @@
  
- #Working with strings
+ #Working with numbers
  
- puts 'What is your name?'
- 
- #getting the name using gets.chomp
- first_name = gets.chomp
- greetings = "Hi "
+ #puts function automatically add new line in the end
+ puts 'Multiplying two numbers'
 
- #String concatenation with variables
- puts greetings+" "+first_name+"!"
+ #print function does NOT automatically add new line in the end (continues strings)
+ print 'Enter the first number  '
+ first_number = gets.chomp
+
+ print 'Enter the second number  '
+ second_number = gets.chomp
+
+ # .to_i converts the input from string to an integer
+ result_product = first_number.to_i * second_number.to_i 
+
+
+ #String interpolation using #{ }
+ puts "The product is #{result_product}"
  
